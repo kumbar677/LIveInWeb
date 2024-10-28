@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room Booking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Select a Room</h1>
+    <form id="booking-form">
+      <div class="room">
+        <img src="single1.jpg" alt="Single Room">
+        <div class="room-info">
+          <h2>Single Room</h2>
+          <p>Price: $100 per night</p>
+          <label>
+            <input class="Confirm" type="radio" name="room-type" value="single" required
+            >
+            <button id="Confirm">Confirm !!</button
+            Select Single Room
+          </label>
+        </div>
+      </div>
+
+      <div class="room">
+        <img src="double.jpg" alt="Double Room">
+        <div class="room-info">
+          <h2>Double Room</h2>
+          <p>Price: $150 per night</p>
+          <label>
+            <input type="radio" name="room-type" value="double" required>
+            Select Double Room
+          </label>
+        </div>
+      </div>
+
+      <div class="room">
+        <img src="suite.jpg" alt="Suite Room">
+        <div class="room-info">
+          <h2>Suite Room</h2>
+          <p>Price: $250 per night</p>
+          <label>
+            <input type="radio" name="room-type" value="suite" required>
+            Select Suite Room
+          </label>
+        </div>
+      </div>
+<!-----
+      <label for="checkin">Check-In Date</label>
+      <input type="date" id="checkin" name="checkin" required>
+
+      <label for="checkout">Check-Out Date</label>
+      <input type="date" id="checkout" name="checkout" required>
+
+      <button type="submit" style="color: rgb(232, 18, 18);">Book Now</button>
+    </form>
+    <button id="logout">Logout</button>
+  </div>-->
+    <script>
+        document.getElementById('confirm').onclick = function() {
+            window.location.href = 'confirmation.html';
+
+  <script src="script.js"></script>
+</body>
+</html>

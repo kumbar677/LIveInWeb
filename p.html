@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="p.css">
+</head>
+<body>
+    <div class="payment-container">
+        <h2>Select Payment Method</h2>
+        <div class="payment-methods">
+            <div class="method" data-method="card">
+                <img src="cccc.jpg" alt="Card">
+                <p>Credit/Debit Card</p>
+            </div>
+            <div class="method" data-method="visa">
+                <img src="vvv.png" alt="Visa">
+                <p>Visa</p>
+            </div>
+        </div>
+        <form id="payment-form" class="hidden">
+            <h2>Payment Details</h2>
+            <div class="form-group">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" required>
+            </div>
+            <div class="form-group">
+                <label for="expiry">Expiry Date (MM/YY)</label>
+                <input type="text" id="expiry" required>
+            </div>
+            <div class="form-group">
+                <label for="cvc">CVC</label>
+                <input type="text" id="cvc" required>
+            </div>
+            <button type="submit">Pay Now</button>
+        </form>
+        <div id="success-message" class="hidden">
+            <div class="checkmark"></div>
+            <p>Payment Successful!</p>
+        </div>
+    </div>
+
+    <script src="p.js"></script>
+</body>
+</html>

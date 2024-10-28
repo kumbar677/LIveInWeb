@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Confirmation</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>Hotel Booking Confirmation</h1>
+
+    <form id="bookingForm">
+        <label for="checkInDate">Check-In Date:</label>
+        <input type="date" id="checkInDate" required>
+        
+        <label for="checkOutDate">Check-Out Date:</label>
+        <input type="date" id="checkOutDate" required>
+        
+        <label for="paymentDetails">Payment Details:</label>
+       
+        
+        <button onclick="window.open('p.html')">pay here</button>
+    </form>
+
+    <div id="confirmationMessage" style="display: none;">
+        <p id="details"></p>
+    </div>
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get user input
+            const checkInDate = document.getElementById('checkInDate').value;
+            const checkOutDate = document.getElementById('checkOutDate').value;
+            const paymentDetails = document.getElementById('paymentDetails').value;
+
+            // Create confirmation message
+            const confirmationMessage = `
+                Check-In Date: ${checkInDate}<br>
+                Check-Out Date: ${checkOutDate}<br>
+                Payment Details: ${paymentDetails}
+            `;
+
+            // Optionally, reset the form
+            document.getElementById('bookingForm').reset();
+        });
+    </script>
+</body>
+</html>
+
